@@ -1,0 +1,13 @@
+
+Note: url has to end with /
+netsh http add urlacl url=https://127.0.0.1:5000/ user="NT AUTHORITY\System"
+netsh http add urlacl url=https://127.0.0.1:9000/ user="NT AUTHORITY\System"
+netsh http add urlacl url=https://127.0.0.1:9001/ user="NT AUTHORITY\System"
+
+
+Note: copying certhash from propertiesbrings a invisible char causing the add to fail
+Note: the guid can also be the cause of a fial for some reason. descriptive errror: parameter is incorrect
+netsh http add sslcert ipport=0.0.0.0:5000 certhash=5b316dd6a11e46932aab93b5b0d01341114331dc appid={46388ed7-ea6e-4a34-86d5-70440c95d875}
+netsh http add sslcert ipport=0.0.0.0:9000 certhash=5b316dd6a11e46932aab93b5b0d01341114331dc appid={46388ed7-ea6e-4a34-86d5-70440c95d876}
+netsh http add sslcert ipport=0.0.0.0:9001 certhash=5b316dd6a11e46932aab93b5b0d01341114331dc appid={46388ed7-ea6e-4a34-86d5-70440c95d877}
+
