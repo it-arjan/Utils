@@ -1,0 +1,1 @@
+aws iam upload-server-certificate --server-certificate-name selfSigned_cli_uploaded --certificate-body file://aws_certificate_cert.pem --private-key file://aws_certificate_key.pem
